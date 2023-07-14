@@ -1,0 +1,44 @@
+<div class="container">
+    <h1>Registrar Veiculos:</h1>
+    <form #form>
+        <div class="form-group">
+            <label for="marca">Marca:</label>
+            <input [(ngModel)]="carro.marca" id="marca" name="marca" type="text"/>
+        </div>
+        <div>
+            <div class="form-group"></div>
+            <label for="placa">Placa:</label>
+            <input [(ngModel)]="carro.placa" id="placa" name="marca" type="text"/>
+        </div>
+        <div class="form-group">
+            <label for="ano">Ano:</label>
+            <input [(ngModel)]="carro.ano" type="number" id="ano" name="ano"/>
+        </div>
+        <div>
+            <div class="form-group">
+                <label>Tipo:</label>
+                <div class="radio-button">
+                <label for="popular" class="radio">
+                    <input type="radio" id="popular" name="tipo" value="Popular" [(ngModel)]="carro.tipo" />
+                    Popular</label>
+
+                <label for="luxo" class="radio">
+                    <input type="radio" id="luxo" name="tipo" value="Luxo" [(ngModel)]="carro.tipo" />
+                    Luxo</label>
+
+                <label for="carga" class="radio">
+                    <input type="radio" id="carga" name="tipo" value="Carga" [(ngModel)]="carro.tipo" />
+                    Carga</label>
+            </div>
+        </div>
+
+        </div>
+        <div>
+            <button class="btn" type="button" (click)="adcionarCarro(carro, form)" *ngIf="!this.editar" [disabled]="confirmaCarro()">Cadastrar</button>
+            <div *ngIf="this.editar" class="buttons">
+                <button class="btn" type="button" (click)="editCarro(carro, form)" [disabled]="confirmaCarro()" >Editar</button>
+                <button class="btn" type="button" (click)="resetaEditar(form)">Cancelar</button>
+            </div>
+        </div>
+    </form>
+</div>

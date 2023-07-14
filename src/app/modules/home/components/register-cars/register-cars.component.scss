@@ -1,0 +1,42 @@
+@import "../../../../../assets/dist/variables.scss";
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 10px;
+  box-shadow: 0 0 70px rgba(0, 0, 0, 0.3);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+table {
+  width: 100%;
+
+  th {
+    background-color: #f2f2f2;
+    padding: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+
+    &:first-child {
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
+  }
+}
+
+.imgs {
+  display: flex;
+  gap: 10px;
+  img {
+    cursor: pointer;
+  }
+}
+
