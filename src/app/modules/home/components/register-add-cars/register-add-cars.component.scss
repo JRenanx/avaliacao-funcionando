@@ -27,13 +27,21 @@ select {
   border-radius: 4px;
 }
 
-button {
-  margin-top: 15px;
-}
-
-.radio-button, 
+.radio-button,
 .radio-button label {
   display: flex;
   justify-content: space-evenly;
   cursor: pointer;
+}
+
+.btn{
+  margin: 10px 0;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.buttons{
+  display: flex;
+  gap: 10px;
 }

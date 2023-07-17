@@ -30,7 +30,7 @@ export class servicesService {
       ano: carro.ano,
       tipo: carro.tipo
     }
-    this.emitEvent.emit([nCarro, i])
+    this.emitEvent.emit([nCarro, i]);
   }
 
   public getList() {
@@ -38,11 +38,12 @@ export class servicesService {
   }
   public addCarro(carro: Carro) {
     this.list.push(carro);
-    localStorage.setItem('carros', JSON.stringify(this.list))
+    localStorage.setItem('carros', JSON.stringify(this.list));
   }
 
   public deleteCarros(event: number) {
     this.list.splice(event, 1);
+    localStorage.setItem('carros', JSON.stringify(this.list));
   }
 
 }
